@@ -1,0 +1,69 @@
+<mat-card class="measure">
+    <mat-card-header>
+    <mat-card-title>Measurement</mat-card-title>
+    </mat-card-header><hr>
+    <mat-card-content>
+        <mat-tab-group>
+            <mat-tab label="Real-time"> </mat-tab>
+            <mat-tab label="Snapshot">  </mat-tab>
+            <mat-tab label="Historical">
+              <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="100px">
+               
+              <div fxLayoutAlign="center center" >
+              <mat-form-field>
+                <h4>Sensor type</h4>
+                <mat-select >
+                  <mat-option value="humidity">Humidity</mat-option>
+                  </mat-select>
+                  </mat-form-field></div>
+                  <div fxLayoutAlign="center center" >
+                  
+              <mat-form-field fxLayout="column">
+                  <h4>Sensors</h4>
+                <mat-select >                  
+                  <mat-option value="sensor"> 'CH01 SE01', ' CH01 SE14 ',  'CH03 SE01'</mat-option>
+                  </mat-select>
+                  </mat-form-field></div>
+                  <div fxLayoutAlign="center center" >
+                  
+                  <mat-form-field fxLayout="column">
+                      <h4>Data Granularity</h4>
+                    <mat-select >
+                      <mat-option value="DG"> 5 min</mat-option>
+                      </mat-select>
+                      </mat-form-field></div>
+                      <div fxLayoutAlign="center center"  >
+                      
+                  <mat-form-field fxLayout="column" fxLayoutGap="50px">
+                      <h4>Time Range</h4>
+                    <mat-select >
+                      <mat-option value="TR"> Past 1 Day</mat-option>
+                      </mat-select>
+                      </mat-form-field></div></div>
+                      <div class="row" fxLayout="row" fxLayoutGap="30px">
+                      <div>
+  
+ <p><button mat-mini-fab color="accent" style="width : 15px; height : 20px" ></button>CH01 SE01</p>
+  <p><button  mat-mini-fab color="green" style="width : 15px; height : 20px"></button>CH01 SE14</p>
+ <p><button mat-mini-fab color="primary" style="width : 15px; height : 20px"></button>CH03 SE01</p>   </div>                
+                      
+                    <div class="chart" >
+                      <canvas #chart ></canvas>
+                    </div></div>
+                    <div fxLayout fxLayoutAlign="right right">
+                      <button mat-raised-button color="primary">
+                        <mat-icon>vertical_align_bottom</mat-icon>
+                        <span>Download</span>
+                      </button>
+                    </div>
+                  </mat-tab>
+                  
+               
+          </mat-tab-group>
+         
+          
+
+      
+    </mat-card-content>
+    
+  </mat-card>
